@@ -4,17 +4,32 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
-const env = process.env.NODE_ENV
+const ENV = process.env.NODE_ENV
 
-const plugins = [
-  new CleanWebpackPlugin(['dist']),
+let plugins = [
+  new CleanWebpackPlugin(['dist'], { verbose: ENV !== 'production' }),
   new HtmlWebpackPlugin({
     template: './src/index.html',
-    inject: 'body'
-  }),
-  new webpack.NamedModulesPlugin(),
-  new webpack.HotModuleReplacementPlugin()
+    inject: 'body',
+    hash: true
+  })
 ]
+
+if (ENV === 'production') {
+  plugins = [
+    ...plugins,
+    new ExtractTextPlugin({
+      filename: '[name].[hash].css'
+    })
+  ]
+} else {
+  // Might be needed for HMR - html-webpack-harddisk-plugin
+  plugins = [
+    ...plugins,
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
+  ]
+}
 
 module.exports = {
   entry: {
@@ -26,7 +41,7 @@ module.exports = {
     open: true
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -44,7 +59,7 @@ module.exports = {
       {
         test: /\.css$/,
         use:
-          env === 'production'
+          ENV === 'production'
             ? ExtractTextPlugin.extract({
               fallback: 'style-loader',
               use: ['css-loader']
@@ -53,17 +68,8 @@ module.exports = {
       }
     ]
   },
-  stats: 'minimal',
-  devtool: env === 'production' ? 'source-map' : 'cheap-eval-source-map',
-  plugins:
-    env === 'production'
-      ? [
-        ...plugins,
-        new ExtractTextPlugin({
-          filename: '[name].css'
-        })
-      ]
-      : plugins,
+  devtool: ENV === 'production' ? 'source-map' : 'cheap-eval-source-map',
+  plugins: plugins,
   resolve: {
     extensions: ['*', '.js']
   }
