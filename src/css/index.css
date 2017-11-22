@@ -24,7 +24,7 @@ p {
 }
 
 .info small {
-  display: inline-flex;
+  display: block;
 }
 
 .axis {

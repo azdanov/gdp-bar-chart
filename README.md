@@ -15,7 +15,10 @@ D3.js GDP bar chart made for FreeCodeCamp
 * [Airbnb Code Style](https://github.com/airbnb/javascript)
 * [Prettier](https://github.com/prettier/prettier)
 * [Stylelint](https://github.com/stylelint/stylelint)
+* [cross-env](https://github.com/kentcdodds/cross-env)
 * [gh-pages](https://github.com/tschaub/gh-pages)
+* [npm-run-all](https://github.com/mysticatea/npm-run-all)
+* [rimraf](https://github.com/isaacs/rimraf)
 
 ## Data
 
