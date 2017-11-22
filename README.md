@@ -22,3 +22,12 @@ D3.js GDP bar chart made for FreeCodeCamp
 U.S. Bureau of Economic Analysis
 
 [https://fred.stlouisfed.org/data/GDP.txt](https://fred.stlouisfed.org/data/GDP.txt)
+
+## Build
+
+* `npm start` - start webpack-dev-server
+* `npm build` - build for production with prebuild linting
+
+## License
+
+[Unlicense](https://unlicense.org)
