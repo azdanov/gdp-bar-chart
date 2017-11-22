@@ -12,6 +12,7 @@ let plugins = [
     template: './src/index.html',
     inject: 'body',
     hash: true,
+    favicon: 'src/favicon.ico',
   }),
 ];
 
