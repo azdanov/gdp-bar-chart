@@ -1,6 +1,6 @@
 {
   "name": "gdp-bar-chart",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "GDP Bar chart",
   "main": "src/js/index.js",
   "repository": "git@github.com:azdanov/gdp-bar-chart.git",
