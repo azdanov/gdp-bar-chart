@@ -32,6 +32,9 @@ if (ENV === 'production') {
 }
 
 module.exports = {
+  externals: {
+    d3: 'd3',
+  },
   entry: {
     bundle: ['./src/js/index.js'],
   },

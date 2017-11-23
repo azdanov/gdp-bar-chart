@@ -1,10 +1,10 @@
-# gdp-bar-chart
+# GDP Line Chart
 
-D3.js GDP bar chart made for FreeCodeCamp
+D3.js GDP line chart made for FreeCodeCamp
 
 ![Chart](https://user-images.githubusercontent.com/6123841/33152362-d95e157e-cfe4-11e7-8d1d-fbebfffaa4dd.png)
 
-[Live](https://azdanov.js.org/gdp-bar-chart/)
+[Live](https://azdanov.js.org/gdp-line-chart/)
 
 ## Tools
 
@@ -29,7 +29,7 @@ U.S. Bureau of Economic Analysis
 ## Build
 
 * `npm start` - start webpack-dev-server
-* `npm build` - build for production with prebuild linting
+* `npm build` - build for production
 
 ## License
 

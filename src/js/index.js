@@ -29,7 +29,7 @@ function calcQuarter(monthNum) {
 }
 
 d3.json(
-  'https://cdn.rawgit.com/azdanov/gdp-bar-chart/19384513/src/data/data.json',
+  'https://cdn.rawgit.com/azdanov/gdp-line-chart/19384513/src/data/data.json',
   (error, json) => {
     if (error) throw error;
 
