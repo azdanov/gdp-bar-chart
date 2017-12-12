@@ -1,6 +1,6 @@
-# GDP Line Chart
+# Line Chart
 
-D3.js GDP line chart made for FreeCodeCamp
+D3.js GDP Line Chart made for FreeCodeCamp.
 
 ![Chart](https://user-images.githubusercontent.com/6123841/33152362-d95e157e-cfe4-11e7-8d1d-fbebfffaa4dd.png)
 
