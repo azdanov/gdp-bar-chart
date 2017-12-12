@@ -4,7 +4,7 @@ D3.js GDP Line Chart made for FreeCodeCamp.
 
 ![Chart](https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513066114/Screen_Shot_2017-12-12_at_10.08.10_ah5rxj.png)
 
-[Live](https://azdanov.js.org/gdp-line-chart/)
+[Live](https://azdanov.js.org/line-chart/)
 
 ## Tools
 
