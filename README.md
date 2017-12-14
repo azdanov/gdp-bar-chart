@@ -33,4 +33,4 @@ U.S. Bureau of Economic Analysis
 
 ## License
 
-[Unlicense](https://unlicense.org)
+[MIT](https://opensource.org/licenses/MIT)
